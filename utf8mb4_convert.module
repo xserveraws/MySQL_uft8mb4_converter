@@ -1,0 +1,16 @@
+<?php
+
+function utf8mb4_convert_menu () {
+  $items = array();
+  $items['admin/config/development/utf8mb4'] = array (
+    'title' => 'MySQL utf8mb4 Converter',
+    'description' => 'Converts mysqldump files to support utf8mb4 when used to restore',
+    'page callback' => 'utf8mb4_convert_main',
+    'access arguments' => 'administer utf8mb4 convert',
+    'weight' => 10,
+    'file' => 'utf8mb4_convert.admin.inc',
+  );
+  return $items;
+}
+
+ ?>
